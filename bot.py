@@ -5,7 +5,7 @@ from datetime import datetime
 import telebot
 from telebot import types
 
-TOKEN = "7623908162:AAHrl4ntkl8b_NyHE3f3sQGHfu70zSnN1Jg"
+TOKEN = os.getenv("TOKEN")
 bot = telebot.TeleBot(TOKEN)
 ADMIN_ID = 6538670514
 
