@@ -41,19 +41,19 @@ def handle_hola(message):
 def handle_menu(message):
     print(f"[{message.from_user.first_name}] ({message.from_user.id}): {message.text}")
 
-    conn = sqlite3.connect("registro.db")
-    cursor = conn.cursor()
+#    conn = sqlite3.connect("registro.db")
+ #   cursor = conn.cursor()
 
-    user_id = message.from_user.id
-    nombre = message.from_user.first_name
-    texto = message.text
-    fecha = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+  #  user_id = message.from_user.id
+#    nombre = message.from_user.first_name
+#   texto = message.text
+#   fecha = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    cursor.execute("INSERT INTO conversaciones (user_id, nombre, mensaje, fecha) VALUES (?, ?, ?, ?)",
-                   (user_id, nombre, texto, fecha))
+ #   cursor.execute("INSERT INTO conversaciones (user_id, nombre, mensaje, fecha) VALUES (?, ?, ?, ?)",
+    #               (user_id, nombre, texto, fecha))
 
-    conn.commit()
-    conn.close()
+  #  conn.commit()
+   # conn.close()
 
     if message.text == "♻️ Reciclar":
         bot.send_message(message.chat.id, "Perfecto. ¿Qué tipo de equipo deseas reciclar?")
